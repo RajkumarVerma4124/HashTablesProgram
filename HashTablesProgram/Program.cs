@@ -15,7 +15,7 @@ namespace HashTablesProgram
 
             while(true)
             {
-                Console.WriteLine("1: Find Frequency Of Given Words \n2: Find Frequency Of Words Entered By User \n3: Exit");
+                Console.WriteLine("1: Find Frequency Of Given Words \n2: Find Frequency Of Large Paragraph \n3: Find Frequency Of Words Entered By User \n4: Exit");
                 Console.Write("Enter A Choice From Above : ");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -26,12 +26,17 @@ namespace HashTablesProgram
                         HashOperations.FreequencyOfWords(paragraph);
                         break;
                     case 2:
+                        //Finding frequency of words in a large paragraph(UC2)
+                        string largepara = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                        HashOperations.FreequencyOfWords(largepara);
+                        break;
+                    case 3:
                         //Finding frequency of words entered by user
                         Console.Write("Enter A Line Or Paragraph Of Words : ");
                         string userPara = Console.ReadLine();
                         HashOperations.FreequencyOfWords(userPara);
                         break;
-                    case 3:
+                    case 4:
                         Environment.Exit(0);
                         break;
                     default:

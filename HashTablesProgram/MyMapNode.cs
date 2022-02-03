@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HashTablesProgram
 {
-    //Creating The MapNode(UC1)
+    //Creating the mapnode to add keyvalue pair to the linklist at position given by hash(UC1 & UC2)
     public class MyMapNode<K, V>
     {
         public struct KeyValue<k, v>

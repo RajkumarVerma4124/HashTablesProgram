@@ -9,7 +9,7 @@ namespace HashTablesProgram
     //Performing hash operation
     public class HashOperations
     {
-        //finding frequency of words in a sentence like “To be or not to be”
+        //finding frequency of words in a sentence or large paragraph(UC1 & UC2)
         public static void FreequencyOfWords(string paragraph)
         {
             int length = paragraph.Split(' ').Count();
@@ -26,7 +26,7 @@ namespace HashTablesProgram
                     hash.Add(word.ToLower(), 1);
             }
 
-            //Displaying the freqyency of words
+            //Displaying the frequency of words
             hash.Display();
         }
     }
