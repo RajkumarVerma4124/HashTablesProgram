@@ -55,7 +55,7 @@ namespace HashTablesProgram
         public void Add(K key, V value)
         {
             var linkedList = GetArrayPositionAndLinkedList(key);
-            KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
+            KeyValue<K, V> item = new KeyValue<K, V>(){ Key = key, Value = value };
             if(linkedList.Count != 0)
             {
                 foreach(KeyValue<K, V> newItem in linkedList)
@@ -85,7 +85,7 @@ namespace HashTablesProgram
             return false;
         }
 
-        //Method to remove existing unique key 
+        //Method to remove existing unique key(UC3) 
         public void Remove(K key)
         {
             var linkedList = GetArrayPositionAndLinkedList(key);

@@ -21,20 +21,24 @@ namespace HashTablesProgram
                 switch (choice)
                 {
                     case 1:
-                        //Finding frequency of words in a sentence “To be or not to be”(UC1)
-                        string paragraph = "To be or not to be";
-                        HashOperations.FreequencyOfWords(paragraph);
+                        //Finding frequency of words in a sentence “To be or not to be” and remove single word(UC1 & UC3)
+                        string sentence = "To be or not to be";
+                        string remWord = "or";
+                        HashOperations.FrequencyOfWords(sentence, remWord);
                         break;
                     case 2:
-                        //Finding frequency of words in a large paragraph(UC2)
+                        //Finding frequency of words in a large paragraph and remove single word(UC2 & UC3)
                         string largepara = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-                        HashOperations.FreequencyOfWords(largepara);
+                        string remParaWord = "avoidable";
+                        HashOperations.FrequencyOfWords(largepara, remParaWord);
                         break;
                     case 3:
                         //Finding frequency of words entered by user
                         Console.Write("Enter A Line Or Paragraph Of Words : ");
                         string userPara = Console.ReadLine();
-                        HashOperations.FreequencyOfWords(userPara);
+                        Console.Write("Enter A Word To Remove : ");
+                        string userRemWord = Console.ReadLine();
+                        HashOperations.FrequencyOfWords(userPara, userRemWord);
                         break;
                     case 4:
                         Environment.Exit(0);
